@@ -1,3 +1,12 @@
+//All i did was reverse the way the loops were iterating though the array
 function insertionSortReverse(array) {
-    return array;
+    for(var i = array.length-1; i >= 0; i--) {
+        var val = array[i];
+        var j;
+        for(j = i; j < array.length-1 && array[j+1] < val; j++) {
+            array[j] = array[j+1];
+        }
+        array[j] = val;
+        }
+        return array;
 }
